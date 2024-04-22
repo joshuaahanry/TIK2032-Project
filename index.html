@@ -5,34 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joshua's Personal Homepage</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        /* Add some styles for the jumpscare effect */
+        #jumpscare {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: none;
+        }
+
+        #jumpscare img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
 </head>
 <body>
     <nav>
         <div class="">
-          <img src="myicon.jpeg" alt="my-avatar" />
+            <img id="avatar" src="myicon.jpeg" alt="my-avatar" />
         </div>
         <ul>
-          <li>
-            <a href="Joshua's Gallery.html">Gallery</a>
-          </li>
-          <li>
-            <a href="Joshua's Blog.html">Blog</a>
-          </li>
+            <li>
+                <a href="Joshua's Gallery.html">Gallery</a>
+            </li>
+            <li>
+                <a href="Joshua's Blog.html">Blog</a>
+            </li>
         </ul>
-      </nav>
+    </nav>
+
     <h1>Selamat datang di Personal Homepage saya!</h1>
     <p>Nama saya Joshua Rumuat. Saya seorang Mahasiswa Universitas Sam Ratulangi di fakultas teknik program studi teknik informatika.</p>
     <div style="display: flex; justify-content: center; align-items: center;">
-    <img src="mypic.jpeg" width="200" height="200" />
+        <img src="mypic.jpeg" id="mypic" width="200" height="200" />
     </div>
-</body>
-<footer>
-    <p>&copy; 2024 - Joshua Rumuat</p>
-    <ul>
-        <li><a href="mailto:hanryjosh@gmail.com">Email</a></li>
-        <li><a href="tel:081354479312">Telepon</a></li>
-        <li><a href="https://www.instagram.com/joshuahanryy">Media Sosial</a></li>
-    </ul>
-</footer>
+    <p>Click my picture and the cat icon for surprise!</p>
 
+    <!-- Add the jumpscare element -->
+    <div id="jumpscare">
+        <img src="img/sunshine.gif" alt="Jumpscare image" />
+    </div>
+
+    <footer>
+        <p>&copy; 2024 - Joshua Rumuat</p>
+        <ul>
+            <li><a href="mailto:hanryjosh@gmail.com">Email</a></li>
+            <li><a href="tel:081354479312">Telepon</a></li>
+            <li><a href="https://www.instagram.com/joshuahanryy">Media Sosial</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        var avatar = document.getElementById('avatar');
+        var mypic = document.getElementById('mypic');
+        var jumpscare = document.getElementById('jumpscare');
+
+        avatar.addEventListener('click', function() {
+            mypic.style.display = 'none';
+            jumpscare.style.display = 'block';
+        });
+
+        jumpscare.addEventListener('click', function() {
+            mypic.style.display = 'block';
+            jumpscare.style.display = 'none';
+        });
+
+        mypic.addEventListener('click', function() {
+            mypic.src = 'img/catsss.jpeg'; 
+        });
+    </script>
+</body>
 </html>
