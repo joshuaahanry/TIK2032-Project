@@ -1,4 +1,4 @@
-   <script>
+
         var avatar = document.getElementById('avatar');
         var mypic = document.getElementById('mypic');
         var jumpscare = document.getElementById('jumpscare');
@@ -16,4 +16,4 @@
         mypic.addEventListener('click', function() {
             mypic.src = 'img/catsss.jpeg'; 
         });
-    </script>
+    
