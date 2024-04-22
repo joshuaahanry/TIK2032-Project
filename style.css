@@ -161,3 +161,22 @@ footer ul li a {
   padding: 0 10px;
 }
 
+#jumpscare {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: none;
+  z-index: 9999; /* Ensure the jumpscare image is on top of other content */
+}
+
+#jumpscare img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire area */
+}
